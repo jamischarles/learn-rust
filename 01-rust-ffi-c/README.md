@@ -1,15 +1,23 @@
 # FF Interop. Calling C code from your Rust code
 
-## Built the C piece
+## Run the build step (compiles the C code so Rust can use it)
 `$ OUT_DIR=TARGET HOST=x86_64-apple-darwin TARGET=x86_64-apple-darwin OPT_LEVEL=0 cargo run --example build`
 
-## Running it
+## Running the Rust app
 `cargo run`
 
-## Compile the c code (standalone)
+## Success:
+Prints to terminal:
+```
+Hello, world! from rust
+Hello, World! from C!!!⏎
+```
+
+
+## Standalone testing - Compile the c code  (not needed for this exercise except to troubleshoot)
 `$ clang hello.c`
 
-Run the c code
+Run the c code (stanadlone)
 `$ ./a.out`
 `-> Hello, World! from C!!!`
 
