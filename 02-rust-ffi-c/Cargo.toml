@@ -2,18 +2,19 @@
 name = "rust-ffi-c"
 version = "0.1.0"
 edition = "2021"
-build = "build.rs" # having this here will automagically build it as part of the run
+build = "build.rs"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 # Does this need to be a dep and a build dep?
 [dependencies]
 cc = "1.0.83"
+libc = "0.2.153"
 
 [build-dependencies]
 cc = "1.0"
 
 # FIXME: how do we add a build step?
-[[example]]
-name = "build"
-path = "build.rs"
+# [[example]]
+# name = "build"
+# path = "build.rs"

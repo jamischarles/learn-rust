@@ -1,4 +1,4 @@
-# FF Interop. Calling C code from your Rust code
+# FFI Interop Part 1 - Hello World example. Calling C code from your Rust code
 
 ## Run the build step (compiles the C code so Rust can use it)
 `$ OUT_DIR=TARGET HOST=x86_64-apple-darwin TARGET=x86_64-apple-darwin OPT_LEVEL=0 cargo run --example build`

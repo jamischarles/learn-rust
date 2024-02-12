@@ -1,0 +1,13 @@
+use libc::size_t;
+
+#[link(name = "snappy")]
+extern "C" {
+    fn snappy_max_compressed_length(source_length: size_t) -> size_t;
+}
+
+fn main() {
+    let x = unsafe { snappy_max_compressed_length(100) };
+    println!("Response from snappy (C library we called via FFI):");
+    println!("---------------------------------------------------");
+    println!("max compressed length of a 100 byte buffer: {}", x);
+}
